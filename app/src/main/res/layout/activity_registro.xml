@@ -1,0 +1,40 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Contenedor principal con el RecyclerView y el mensaje de "No hay registros" -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Texto para mostrar cuando no haya registros -->
+        <TextView
+            android:id="@+id/tvNoRegistros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No hay registros disponibles"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- RecyclerView para mostrar los registros -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRegistros"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- Botón de "Atrás" al final de la pantalla -->
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atrás"
+        android:layout_gravity="bottom"/>
+</FrameLayout>
